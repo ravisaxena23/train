@@ -1,0 +1,28 @@
+<section class="container-md">
+<h2>Seat Reservation  </h2>
+<div class="input-group">
+  <span class="input-group-text">Number of Seats:</span>
+  <input type="number" id="numSeats" class="form-control" [(ngModel)]="numSeats" min="1" max="7">
+  <button class="btn btn-primary" (click)="reserveSeats()" [disabled]="!numSeats || numSeats >7">Reserve</button>
+</div>
+
+<div *ngIf="reservedSeats.length > 0" class="reservedSeats">
+  <h4>Reserved Seats:</h4>
+  <table class="table table-light table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Sr.no</th>
+        <th scope="col">Row number</th>
+        <th scope="col">Seat Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let seat of reservedSeats; let i = index" >
+        <th scope="row">{{i+1}}</th>
+        <td>{{seat.rowNumber}}</td>
+        <td>{{seat.seatNumber}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</section>

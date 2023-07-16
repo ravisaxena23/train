@@ -1,0 +1,21 @@
+/* seat-display.component.css */
+.coach-seats {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.seat {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  text-align: center;
+  background-color: green;
+}
+
+.booked {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  text-align: center;
+  background-color: red;
+}

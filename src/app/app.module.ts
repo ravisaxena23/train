@@ -1,0 +1,24 @@
+// app.module.ts
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { SeatReservationComponent } from './seat-reservation/seat-reservation.component';
+import { SeatDisplayComponent } from './seat-display/seat-display.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    SeatReservationComponent,
+    SeatDisplayComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
